@@ -1,6 +1,7 @@
 import React from 'react'
-import Logo from './subcomponents/Logo'
-import Navbar from './subcomponents/Navbar'
+import Logo from './Subheadercomponent/Logo'
+import Navbar from './Subheadercomponent/Navbar'
+import Icon from './Subheadercomponent/icon'
 
 const Header = () => {
   return (
@@ -10,6 +11,8 @@ const Header = () => {
         <Logo />
         {/* Navbar */}
         <Navbar />
+        {/*icons */}
+        <Icon />
       </header>
     </div>
   )

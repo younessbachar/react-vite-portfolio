@@ -1,14 +1,14 @@
 
-import Content from './components/content'
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Content from './components/ContentComponent/content'
+import Footer from './components/FooterComponent/Footer'
+import Header from './components/HeaderComponent/Header'
 
 function App() {
 
   return (
     <div className='w-full h-screen'>
       <Header />
-      <Content />
+      <Content/>
       <Footer />
     </div>
   )
