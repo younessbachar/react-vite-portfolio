@@ -67,7 +67,7 @@ const Project = () => {
                 : "border-gray-700  hover:bg-teal-300/50 hover:cursor-pointer hover:border-white/60 hover:shadow-lg"
             }`}
           >
-            <h5 className="text-base font-bold text-gray-900  dark:text-white">
+            <h5 className="text-base font-bold text-white">
               {skill}
             </h5>
           </motion.button>
@@ -96,7 +96,7 @@ const Project = () => {
               transition={{ duration: 0.8, delay: index * 0.3 }}
               viewport={{ once: false, amount: 0.2 }}
               key={index}
-              class="bg-white border border-gray-200 rounded-lg shadow-2xl hover:bg-teal-300/20 dark:bg-gray-800 dark:border-gray-700"
+              class=" border border-gray-200 rounded-lg shadow-2xl hover:bg-teal-300/20 bg-gray-800 border-gray-700"
             >
               <img
                 class="rounded-t-lg w-full h-auto"
@@ -105,10 +105,10 @@ const Project = () => {
               />
 
               <div class="p-5">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight  text-white">
                   {project.title}
                 </h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p class="mb-3 font-normal text-gray-400">
                   {project.description}
                 </p>
                 <div className="flex justify-between items-center">
