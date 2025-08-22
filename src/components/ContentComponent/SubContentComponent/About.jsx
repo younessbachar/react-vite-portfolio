@@ -4,9 +4,19 @@ import  {motion}  from "framer-motion";
 
 const About = () => {
   return (
+    <div className="pt-30 bg-[#1f1f3f] text-white" id="about">
+      <motion.h1
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl text-center font-bold text-white  "
+          >
+          About<span className="text-teal-300"> Me</span>
+      </motion.h1>
     <div
-      className="mx-20 flex justify-around items-center py-20 bg-[#1f1f3f] text-white"
-      id="about"
+      className="mx-20 flex justify-around items-center md:flex-row flex-col-reverse md:pt-20 sm:pb-20"
+    
     >
       <motion.div
       initial={{ opacity: 0, transform: "translateX(-100px)" }}
@@ -14,7 +24,6 @@ const About = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       >
-        <h1 className="text-sm text-gray-400 font-bold ">About Me</h1>
         <h1 className="text-4xl font-bold text-teal-300 my-4">
           I am a full-stack developer
         </h1>
@@ -45,9 +54,11 @@ const About = () => {
             </li>
           </ul>
         </div>
-        <a href="/MyCV.pdf" download={"MyCV.pdf"} className="text-white border-2 border-teal-300 px-2 py-1 bg-teal-300 my-4 rounded-md hover:bg-teal-400 hover:cursor-pointer hover:transform hover:scale-105 transition-all duration-300  border-none px-4 mx-2">
+        <motion.a
+        whileHover={{scale:1.1}}
+        href="/MyCV.pdf" download={"MyCV.pdf"} className="text-white px-2 py-1 bg-teal-300 my-4 rounded-md hover:bg-teal-400 hover:cursor-pointer border-none px-4 mx-2">
           Download CV
-        </a>
+        </motion.a>
       </motion.div>
       <motion.div
       initial={{ opacity: 0, transform: "translateX(100px)" }}
@@ -55,7 +66,7 @@ const About = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       >
-        <div className="h-50 w-50 rounded-full overflow-hidden shadow-lg relative">
+        <div className="h-50 w-50 rounded-full overflow-hidden border-3 border-teal-300/40 relative mt-10">
           <img
             src={photo}
             alt="Hero"
@@ -63,6 +74,7 @@ const About = () => {
           />
         </div>
       </motion.div>
+    </div>
     </div>
   );
 };

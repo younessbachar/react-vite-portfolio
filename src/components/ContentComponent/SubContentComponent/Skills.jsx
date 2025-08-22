@@ -40,7 +40,7 @@ const Skills = () => {
     },
   ]
   return (
-    <div className="mx-30 py-20" id="skills">
+    <div className="mx-30 pt-20" id="skills">
       <motion.h1
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -49,14 +49,15 @@ const Skills = () => {
       className="text-4xl text-center font-bold text-white my-15">
         My <span className="text-teal-300">Skills</span>
       </motion.h1>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {myskills.map((skill, index)=>(
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="block max-w-sm p-4 border border-gray-200 rounded-lg shadow-sm bg-gray-800 dark:border-gray-700 dark:hover:bg-teal-300/20"
+            transition={{ duration: 1 , delay: index * 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="block max-w-sm p-4 border border-gray-200 rounded-lg shadow shadow-lg bg-gray-800 dark:border-gray-700 dark:hover:bg-teal-300/20"
           >
             <h1 className="pb-6 mr-2"><i className={`text-2xl text-teal-300 ${skill.icon}`}></i></h1>
             <h5 className="mb-2 text-center text-xl font-bold tracking-tight text-gray-900 dark:text-white">
