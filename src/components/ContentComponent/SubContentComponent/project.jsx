@@ -40,7 +40,7 @@ const Project = () => {
   const [activeTab, setActiveTab] = useState("View All");
 
   return (
-    <div className="mx-30 my-10 pt-20" id="projects">
+    <div className="px-10 md:px-30 my-10 pt-20" id="projects">
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -51,7 +51,7 @@ const Project = () => {
         Explore My<span className="text-teal-300"> Projects</span>
       </motion.h1>
       {/* tabs */}
-      <div className="flex justify-center gap-3 mb-10">
+      <div className="md:flex hidden w-full  flex justify-center flex-wrap flex  gap-3 mb-10">
         {skills.map((skill, index) => (
           <motion.button
             whileTap={{ scale: 0.95 }}
@@ -73,6 +73,13 @@ const Project = () => {
           </motion.button>
         ))}
       </div>
+      {/*Phone tabs */}
+      <select className="md:hidden block w-full my-4 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-teal-300 focus:border-teal-300" onChange={(e) => setActiveTab(e.target.value)}>
+        {skills.map((skill, index) => (
+          <option key={index}>{skill}</option>
+        ))}
+      </select>
+
 
       {/* projects */}
       <div className="grid md:grid-cols-3 grid-cols-1 gap-5">

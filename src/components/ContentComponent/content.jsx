@@ -9,12 +9,13 @@ import socialimage from '../../assets/images/social.png'
 const Content = () => {
   return (
     <div className='bg-[#1f1f3f]'>
+      
       <Hero />
       <About />
       <Project />
       <Skills />
       <ContactMe />
-      <a href="https://wa.link/lisgyr"><img src={socialimage} className="fixed bottom-10 right-12 w-12 h-12 hover:animate-bounce hover:cursor-pointer "></img></a>
+      <a href="https://wa.link/lisgyr"><img src={socialimage} className="fixed bottom-10 right-12 w-12 h-12 hover:animate-bounce hover:cursor-pointer"></img></a>
     </div>
   )
 }
