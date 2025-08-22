@@ -1,31 +1,38 @@
 import { useState } from "react";
 import photo from "../../../assets/images/1.jpeg";
+import portfolio from "../../../assets/images/portfolio.png";
+import bysystem from "../../../assets/images/bysystem.png";
+import tailwindcss from "../../../assets/images/tailwindcss.png";
+
 import { motion } from "framer-motion";
 const Project = () => {
   const data = [
     {
-      title: "Noteworthy technology acquisitions 2021 React",
+      title: "BY-folio",
       description:
-        "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-      image: photo,
-      category: ["React.js", "Full Stack Development", "View All"],
-      preview: "#",
+        "Description of BY-folio goes here. It includes details about the technologies used, features, and any other relevant information.",
+      image: portfolio,
+      category: ["React.js", "TailwindCSS","View All"],
+      github: "https://github.com/younessbachar/react-vite-portfolio",
+      preview: "https://by-folio.vercel.app/",
     },
     {
-      title: "Project 2",
+      title: "BY-System",
       description:
-        "Description of project 1 goes here. It includes details about the technologies used, features, and any other relevant information.",
-      image: photo,
+        "Description of BY-System goes here. It includes details about the technologies used, features, and any other relevant information.",
+      image: bysystem,
+      category: ["Node.js", "View All"],
+      github: "https://github.com/younessbachar/BY-System",
+      preview: "https://nodejs-project-xrrt.onrender.com/",
+    },
+    {
+      title: "TailwindCSS",
+      description:
+        "Description of TailwindCSS goes here. It includes details about the technologies used, features, and any other relevant information.",
+      image: tailwindcss,
       category: ["TailwindCSS", "View All"],
-      preview: "#",
-    },
-    {
-      title: "Project 3",
-      description:
-        "Description of project 1 goes here. It includes details about the technologies used, features, and any other relevant information.",
-      image: photo,
-      category: ["Node.js", "Full Stack Development", "View All"],
-      preview: "#",
+      github: "https://github.com/younessbachar/tailwind-project",
+      preview: "https://younessbachar.github.io/tailwind-project/",
     },
   ];
 
@@ -99,7 +106,7 @@ const Project = () => {
               class=" border border-gray-200 rounded-lg shadow-2xl hover:bg-teal-300/20 bg-gray-800 border-gray-700"
             >
               <img
-                class="rounded-t-lg w-full h-auto"
+                class="rounded-lg p-1 object-cover min-h-52 w-full h-auto"
                 src={project.image}
                 alt=""
               />
@@ -113,7 +120,7 @@ const Project = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <a
-                    href="#"
+                    href={project.github}
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-400/30 rounded-lg hover:bg-teal-400 hover:transform hover:scale-105 transition-all duration-300 border-none"
                   >
                     <p>View</p>

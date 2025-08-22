@@ -79,7 +79,7 @@ export const ContactMe = () => {
             Contact <span className="text-teal-300">Information</span>
           </h1>
           {informations.map((information, index) => (
-          <div key={index} className="bg-teal-300/20 hover:bg-teal-300/50 w-full mb-2 hover:cursor-pointer hover:transform hover:scale-102 transition-all duration-300 flex border-1 border-teal-gray-500 rounded-md p-2 ">
+          <div key={index} className="bg-teal-300/20 hover:bg-teal-300/50 w-full mb-2 hover:cursor-pointer hover:transform hover:scale-102 transition-all duration-300 flex md:flex-row flex-col border-1 border-teal-gray-500 rounded-md p-2 ">
             <div className="text-teal-300 p-2 text-2xl mr-4"><i className={information.icon}></i></div>
             <div>
               <div className="font-bold text-white">{information.title}</div>
@@ -88,6 +88,8 @@ export const ContactMe = () => {
           </div>
         ))}
         </motion.div>
+        
+
       </div>
     </div>
   );

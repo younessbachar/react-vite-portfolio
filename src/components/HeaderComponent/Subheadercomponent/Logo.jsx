@@ -14,7 +14,7 @@ const Logo = () => {
         href="/"
         className="font-bold text-3xl text-teal-300"
       >
-        BY-folio
+        BY<span className="text-white">-folio</span>
       </a>
     </motion.div>
   );
