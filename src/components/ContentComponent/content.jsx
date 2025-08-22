@@ -15,7 +15,7 @@ const Content = () => {
       <Project />
       <Skills />
       <ContactMe />
-      <a href="https://wa.me/+212691648546"><img src={socialimage} className="fixed bottom-10 right-6 md:right-10 w-12 h-12 hover:animate-bounce hover:cursor-pointer"></img></a>
+      <a href="https://wa.me/+212691648546"><img src={socialimage} className="fixed bottom-10 right-10 md:right-10 w-12 h-12 hover:animate-bounce hover:cursor-pointer"></img></a>
     </div>
   )
 }

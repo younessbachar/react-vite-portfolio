@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Button */}
       <div
-        className="lg:hidden fixed top-2 right-2 text-3xl text-teal-300 cursor-pointer z-50"
+        className="lg:hidden fixed top-4 right-4 text-3xl text-teal-300 cursor-pointer z-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
@@ -88,7 +88,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col rounded-md items-center space-y-6 py-6 px-6 lg:hidden z-55 "
+          className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col rounded-xl items-center space-y-6 py-6 px-6 lg:hidden z-55 "
         >
           {navitems.map((item, index) => (
             <li key={index}>
