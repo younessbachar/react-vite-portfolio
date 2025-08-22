@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full flex justify-between items-center px-6 md:px-12 py-4 text-white relative">
+    <nav className="w-2/3 flex justify-between items-center px-6 md:px-12 py-4 text-white relative">
       {/* Desktop Menu */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -88,7 +88,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-16 left-0 w-full  bg-gray-900 flex flex-col items-center space-y-6 py-6 px-6 md:hidden z-40"
+          className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col items-center space-y-6 py-6 px-6 md:hidden z-55 "
         >
           {navitems.map((item, index) => (
             <li key={index}>
@@ -111,7 +111,7 @@ const Navbar = () => {
           ))}
 
           {/* Social icons inside mobile menu */}
-          <div className="flex items-center space-x-6 text-2xl mt-4">
+          <div className="flex items-center  space-x-6 text-2xl mt-4">
             {socialLinks.map((s, i) => (
               <a key={i} href={s.href} aria-label={s.label}>
                 <i className={`fa-solid ${s.icon} hover:text-teal-300`}></i>

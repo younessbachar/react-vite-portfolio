@@ -43,7 +43,7 @@ export const ContactMe = () => {
          transition={{ duration: 1 }}
          viewport={{ once: false , amount: 0.2 }}
 
-         className="space-x-8 bg-gray-800 dark:border-gray-700 border-1 border-teal-gray-500 rounded-md p-10 shadow-lg ">
+         className="space-x-8 bg-gray-800  border-1 border-gray-600 rounded-md p-10 shadow-lg ">
           <h1 className="text-3xl font-bold text-white text-center mb-10"><span className="text-teal-300">Get</span> in Touch</h1>
           <form className="flex flex-col space-y-4" action="">
             <input
@@ -75,7 +75,7 @@ export const ContactMe = () => {
          whileInView={{ opacity: 1, translateX: 0 }}
          transition={{ duration: 1 }}
          viewport={{ once: false , amount: 0.2 }}
-          className="space-x-8 bg-gray-800 dark:border-gray-700 border-1 border-teal-gray-500 rounded-md p-10 shadow-lg">
+          className="space-x-8 bg-gray-800 border-gray-700 border-1  rounded-md p-10 shadow-lg">
           <h1 className="text-3xl font-bold text-white text-center mb-6">
             Contact <span className="text-teal-300">Information</span>
           </h1>
