@@ -3,13 +3,13 @@ import photo from '../../../assets/images/myphoto2.png'
 import { motion } from 'framer-motion'
 const Hero = () => {
   return (
-    <div className='min-h-screen md:px-20 pt-32 pb-15 text-white flex justify-around items-center md:flex-row flex-col-reverse' id='home'>
+    <div className='min-h-screen lg:px-20 pt-32 pb-15 text-white flex flex-col-reverse justify-around items-center lg:flex-row ' id='home'>
       <motion.div
          initial={{ opacity: 0, translateX: -100 }}
          whileInView={{ opacity: 1, translateX: 0 }}
          transition={{ duration: 1 }}
          viewport={{ once: true }}
-         className='md:w-1/2 w-full md:text-left space-y-4 p-10'>
+         className='lg:w-1/2 w-full lg:text-left space-y-4 p-10'>
         <p className='text-2xl'>Hello, I'm</p>
        <h1 className='text-4xl font-bold text-teal-300'>YOUNESS BACHAR-KHIR</h1>
        <h1 className='text-4xl font-bold'>I'm a Full stack developer</h1>

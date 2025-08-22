@@ -22,14 +22,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-2/3 flex justify-between items-center px-6 md:px-12 py-4 text-white relative">
+    <nav className="w-full flex justify-between items-center px-6 md:px-12 py-4 text-white relative">
       {/* Desktop Menu */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="hidden md:flex"
+        className="hidden lg:flex"
       >
         <ul className="flex space-x-12 ">
           {navitems.map((item, index) => (
@@ -65,7 +65,7 @@ const Navbar = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="hidden md:flex items-center space-x-4 text-2xl"
+        className="hidden lg:flex items-center space-x-4 text-2xl"
       >
         {socialLinks.map((s, i) => (
           <a key={i} href={s.href} aria-label={s.label}>
@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Button */}
       <div
-        className="md:hidden fixed top-2 right-2 text-3xl text-teal-300 cursor-pointer z-50"
+        className="lg:hidden fixed top-2 right-2 text-3xl text-teal-300 cursor-pointer z-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
@@ -88,7 +88,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col items-center space-y-6 py-6 px-6 md:hidden z-55 "
+          className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col rounded-md items-center space-y-6 py-6 px-6 lg:hidden z-55 "
         >
           {navitems.map((item, index) => (
             <li key={index}>

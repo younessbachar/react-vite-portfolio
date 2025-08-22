@@ -49,7 +49,7 @@ const Skills = () => {
       className="text-4xl text-center font-bold text-white my-15">
         My <span className="text-teal-300">Skills</span>
       </motion.h1>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {myskills.map((skill, index)=>(
           <motion.div
             key={index}

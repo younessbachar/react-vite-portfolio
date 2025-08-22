@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { title, view } from "framer-motion/client";
 export const ContactMe = () => {
   const informations = [
     {
@@ -25,7 +24,7 @@ export const ContactMe = () => {
     
   ];
   return (
-    <div id="contact" className="px-10 md:px-30 py-20">
+    <div id="contact" className="px-10 md:px-20 lg:px-30 py-20">
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -35,7 +34,7 @@ export const ContactMe = () => {
       >
         Contact<span className="text-teal-300"> Me</span>
       </motion.h1>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 md:gap-4 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2  gap-10 md:gap-4 ">
         {/* Form */}
         <motion.div
          initial={{ opacity: 0, translateX: -100 }}
