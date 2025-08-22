@@ -8,7 +8,7 @@ const Logo = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="hover:cursor-pointer hover:scale-105 w-full pl-10 transition-transform duration-300"
+      className="hover:cursor-pointer hover:scale-105 w-1/3 pl-10 transition-transform duration-300"
     >
       <a href="/">
         <span className="font-bold text-2xl md:text-3xl text-teal-300">
