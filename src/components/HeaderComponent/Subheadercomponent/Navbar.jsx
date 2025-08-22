@@ -88,7 +88,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col items-center space-y-6 py-6 md:hidden z-40"
+          className="absolute top-16 left-0 w-full  bg-gray-900 flex flex-col items-center space-y-6 py-6 px-6 md:hidden z-40"
         >
           {navitems.map((item, index) => (
             <li key={index}>
