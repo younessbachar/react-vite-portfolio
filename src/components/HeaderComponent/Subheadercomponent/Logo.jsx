@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Logo = () => {
   return (
@@ -8,15 +8,16 @@ const Logo = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="hover:cursor-pointer hover:scale-105 w-1/3 pl-10 transition-transform duration-300"
+      className="hover:cursor-pointer min-w-40 ml-10 sm:pl-20 md:w-1/3 hover:scale-105 transition-transform duration-300"
     >
-      <a href="/">
-        <span className="font-bold text-2xl md:text-3xl text-teal-300">
-          BY-folio
-        </span>
+      <a
+        href="/"
+        className="font-bold w-full text-2xl md:text-3xl text-teal-300"
+      >
+        BY-folio
       </a>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

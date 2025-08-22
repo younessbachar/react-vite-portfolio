@@ -114,7 +114,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6 text-2xl mt-4">
             {socialLinks.map((s, i) => (
               <a key={i} href={s.href} aria-label={s.label}>
-                <i className={`fa-brands ${s.icon} hover:text-teal-300`}></i>
+                <i className={`fa-solid ${s.icon} hover:text-teal-300`}></i>
               </a>
             ))}
           </div>
