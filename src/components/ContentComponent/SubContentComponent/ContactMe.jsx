@@ -24,7 +24,7 @@ export const ContactMe = () => {
     
   ];
   return (
-    <div id="contact" className="px-5 md:px-20 lg:px-30 py-20">
+    <div id="contact" className="px-4 md:px-20 lg:px-30 py-20">
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
