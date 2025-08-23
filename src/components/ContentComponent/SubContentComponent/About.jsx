@@ -15,7 +15,7 @@ const About = () => {
           About<span className="text-teal-300"> Me</span>
       </motion.h1>
     <div
-      className="mx-10 pl-10 md:pl-4 md:mx-20 flex justify-around items-center md:flex-row flex-col-reverse md:pt-20 sm:pb-20"
+      className="px-10 md:px-20 flex justify-around items-center md:flex-row flex-col-reverse md:pt-20 sm:pb-20"
     
     >
       <motion.div
