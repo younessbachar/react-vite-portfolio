@@ -80,7 +80,7 @@ export const ContactMe = () => {
          transition={{ duration: 1 }}
          viewport={{ once: false , amount: 0.2 }}
 
-         className="space-x-8 bg-gray-800 border-1 border-gray-600 rounded-md p-4 md:p-10 shadow-lg ">
+         className="space-x-8 bg-gray-800 border-1 border-gray-600 rounded-md p-5 md:p-10 shadow-lg ">
           <h1 className="text-3xl font-bold text-white text-center mb-10"><span className="text-teal-300">Get</span> in Touch</h1>
           <form onSubmit={sendEmail} className="flex flex-col space-y-4" action="">
             <input
