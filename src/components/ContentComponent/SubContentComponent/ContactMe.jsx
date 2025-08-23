@@ -80,26 +80,26 @@ export const ContactMe = () => {
          transition={{ duration: 1 }}
          viewport={{ once: false , amount: 0.2 }}
 
-         className="space-x-8 bg-gray-800 border-1 border-gray-600 rounded-md p-2 md:p-10 shadow-lg ">
+         className="space-x-8 bg-gray-800 border-1 border-gray-600 rounded-md p-4 md:p-10 shadow-lg ">
           <h1 className="text-3xl font-bold text-white text-center mb-10"><span className="text-teal-300">Get</span> in Touch</h1>
           <form onSubmit={sendEmail} className="flex flex-col space-y-4" action="">
             <input
               type="text"
               placeholder="Name"
-              className="p-2 w-[90%] text-white rounded-md bg-teal-300/20 outline-none"
+              className="p-2 w-full text-white rounded-md bg-teal-300/20 outline-none"
               id="name"
               name="name"
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-2 w-[90%] text-white rounded-md bg-teal-300/20 outline-none"
+              className="p-2 w-full text-white rounded-md bg-teal-300/20 outline-none"
               id="email"
               name="email"
             />
             <textarea
               placeholder="Message"
-              className="p-2 w-[90%] h-[100px] rounded-md text-white bg-teal-300/20 outline-none"
+              className="p-2 w-full h-[100px] rounded-md text-white bg-teal-300/20 outline-none"
               id="message"
               name="message"
             />
