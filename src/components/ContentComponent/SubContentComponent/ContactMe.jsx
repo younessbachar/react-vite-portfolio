@@ -24,7 +24,7 @@ export const ContactMe = () => {
     
   ];
   return (
-    <div id="contact" className="px-4 md:px-20 lg:px-30 py-20">
+    <div id="contact" className="px-8 md:px-20 lg:px-30 py-20">
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -79,11 +79,11 @@ export const ContactMe = () => {
             Contact <span className="text-teal-300">Information</span>
           </h1>
           {informations.map((information, index) => (
-          <div key={index} className="bg-teal-300/20 hover:bg-teal-300/50 w-full mb-2 hover:cursor-pointer hover:transform hover:scale-102 transition-all duration-300 flex md:flex-row  border-1 border-teal-gray-500 rounded-md p-2 ">
+          <div key={index} className="bg-teal-300/20 hover:bg-teal-300/50 w-full mb-2 hover:cursor-pointer hover:transform hover:scale-102 transition-all duration-300 flex md:flex-row  border-1 border-gray-500 rounded-md p-2 ">
             <div className="text-teal-300 p-2 text-2xl mr-4"><i className={information.icon}></i></div>
             <div>
               <div className="font-bold text-white">{information.title}</div>
-              <div className="text-gray-400 md:text-sm">{information.description}</div>
+              <div className="text-gray-400 text-sm md:text-base">{information.description}</div>
             </div>
           </div>
         ))}

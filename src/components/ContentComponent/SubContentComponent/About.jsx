@@ -15,7 +15,7 @@ const About = () => {
           About<span className="text-teal-300"> Me</span>
       </motion.h1>
     <div
-      className="mx-20 flex justify-around items-center md:flex-row flex-col-reverse md:pt-20 sm:pb-20"
+      className="mx-10 pl-10 md:pl-4 md:mx-20 flex justify-around items-center md:flex-row flex-col-reverse md:pt-20 sm:pb-20"
     
     >
       <motion.div
@@ -36,7 +36,7 @@ const About = () => {
           UIs using Tailwind CSS. <br /> I love creating modern, user-friendly
           web experiences.
         </p>
-        <div className="flex justify-between space-y-2 mt-4">
+        <div className="flex flex-col md:flex-row md:justify-between space-y-2 mt-4 mb-6">
           <ul>
             <li className="text-sm text-gray-400 my-2 mb-5">
               <span>👨‍💻</span>Full-stack web development

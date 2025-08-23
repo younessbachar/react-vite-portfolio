@@ -106,7 +106,7 @@ const Project = () => {
               class=" border border-gray-200 rounded-lg shadow-2xl hover:bg-teal-300/20 bg-gray-800 border-gray-700"
             >
               <img
-                class="rounded-lg p-1 object-cover min-h-52 w-full h-auto"
+                class="rounded-2xl p-1 object-cover h-52 w-full "
                 src={project.image}
                 alt=""
               />
