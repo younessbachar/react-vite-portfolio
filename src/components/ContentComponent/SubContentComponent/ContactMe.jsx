@@ -1,5 +1,43 @@
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com"
 export const ContactMe = () => {
+
+
+  {/* send email */}
+ const sendEmail = (e) => {
+  e.preventDefault();
+
+  // أول إيميل: يوصل ليك انت
+  emailjs.sendForm(
+    "service_mosq1lt",     // Service ID
+    "template_eml83tw",    // Template ID (الخاص بيك)
+    e.target,
+    "cePi_iaXOdl7D8GQB"    // Public Key
+  )
+  .then((result) => {
+    console.log("Email sent to me!", result.text);
+
+    // ثاني إيميل: Auto-reply للزائر
+    emailjs.sendForm(
+      "service_mosq1lt",     // نفس Service ID
+      "template_1zqh3b9",  // Template ID الجديد
+      e.target,
+      "cePi_iaXOdl7D8GQB"
+    )
+    .then(() => {
+      console.log("Auto-reply sent!");
+    })
+    .catch((err) => console.error("Failed to send auto-reply:", err));
+
+    alert("Message sent successfully!");
+    e.target.reset();
+  })
+  .catch((error) => {
+    console.log("Failed to send email:", error.text);
+    alert("Failed to send message. Please try again.");
+  });
+};
+
   const informations = [
     {
       icon: "fa-solid fa-location-dot",
@@ -44,20 +82,26 @@ export const ContactMe = () => {
 
          className="space-x-8 bg-gray-800 border-1 border-gray-600 rounded-md p-4 md:p-10 shadow-lg ">
           <h1 className="text-3xl font-bold text-white text-center mb-10"><span className="text-teal-300">Get</span> in Touch</h1>
-          <form className="flex flex-col space-y-4" action="">
+          <form onSubmit={sendEmail} className="flex flex-col space-y-4" action="">
             <input
               type="text"
               placeholder="Name"
               className="p-2 w-[90%] text-white rounded-md bg-teal-300/20 outline-none"
+              id="name"
+              name="name"
             />
             <input
               type="email"
               placeholder="Email"
               className="p-2 w-[90%] text-white rounded-md bg-teal-300/20 outline-none"
+              id="email"
+              name="email"
             />
             <textarea
               placeholder="Message"
               className="p-2 w-[90%] h-[100px] rounded-md text-white bg-teal-300/20 outline-none"
+              id="message"
+              name="message"
             />
             <button
               type="submit"
