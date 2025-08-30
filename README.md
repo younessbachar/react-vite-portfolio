@@ -38,28 +38,28 @@ Deployment: Vercel
 ## 📂 Project Structure
 
 react-vite-portfolio/
-├── public/                  # Static assets (favicon, logos, etc.)
-├── src/                     # Main source code
-│   ├── assets/              # Images and icons
-│   │   └── images/          # Project images (portfolio.png, bysystem.png, etc.)
-│   │
-│   ├── components/          # Reusable UI components
-│   │   ├── Content.jsx      # Main wrapper (Hero, About, Projects, Skills, Contact)
-│   │   └── SubContentComponent/
-│   │       ├── Hero.jsx     # Hero section
-│   │       ├── About.jsx    # About section
-│   │       ├── Project.jsx  # Projects section
-│   │       ├── Skills.jsx   # Skills section
-│   │       └── ContactMe.jsx# Contact form / contact section
-│   │
-│   ├── App.jsx              # Root component
-│   ├── main.jsx             # React DOM entry point
-│   └── index.css            # Global styles (TailwindCSS)
-│
-├── package.json             # Project dependencies & scripts
-├── tailwind.config.js       # TailwindCSS configuration
-├── vite.config.js           # Vite configuration
-└── README.md                # Project documentation
+├── public/                  # Static assets (favicon, logos, etc.)                                                                                                          
+├── src/                     # Main source code                                                                                                                              
+│   ├── assets/              # Images and icons                                                                                                                              
+│   │   └── images/          # Project images (portfolio.png, bysystem.png, etc.)                                                                                            
+│   │                                                                                                                                                                        
+│   ├── components/          # Reusable UI components                                                                                                                        
+│   │   ├── Content.jsx      # Main wrapper (Hero, About, Projects, Skills, Contact)                                                                                                                                                                                                                                                                     
+│   │   └── SubContentComponent/                                                                                                                                             
+│   │       ├── Hero.jsx     # Hero section                                                                                                                                  
+│   │       ├── About.jsx    # About section                                                                                                                                 
+│   │       ├── Project.jsx  # Projects section                                                                                                                              
+│   │       ├── Skills.jsx   # Skills section                                                                                                                                
+│   │       └── ContactMe.jsx# Contact form / contact section                                                                                                                
+│   │                                                                                                                                                                        
+│   ├── App.jsx              # Root component                                                                                                                                
+│   ├── main.jsx             # React DOM entry point                                                                                                                         
+│   └── index.css            # Global styles (TailwindCSS)                                                                                                                   
+│                                                                                                                                                                            
+├── package.json             # Project dependencies & scripts                                                                                                                
+├── tailwind.config.js       # TailwindCSS configuration                                                                                                                     
+├── vite.config.js           # Vite configuration                                                                                                                            
+└── README.md                # Project documentation                                                                                                                         
 
 
 ⚙️ Installation & Setup
