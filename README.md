@@ -94,6 +94,6 @@ TailwindCSS Project → UI components with Tailwind
 
 - GitHub: [@younessbachar](https://github.com/younessbachar)  
 - WhatsApp: [+212691648546](https://wa.me/+212691648546)  
-- LinkedIn: [Your Profile](https://www.linkedin.com/in/youness-bachar-khir-565934316/)  
+- LinkedIn: [My Profile](https://www.linkedin.com/in/youness-bachar-khir-565934316/)  
 - Email: [Send me an Email](mailto:younesbchar01@gmail.com)
 
