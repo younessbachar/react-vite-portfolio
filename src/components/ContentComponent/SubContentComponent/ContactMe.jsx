@@ -1,42 +1,48 @@
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com"
+import emailjs from "emailjs-com";
+import { useState } from "react";
+
 export const ContactMe = () => {
+  const [isSending, setIsSending] = useState(false);
 
+  {
+    /* send email */
+  }
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    emailjs
+      .sendForm(
+        "service_mosq1lt",
+        "template_eml83tw",
+        e.target,
+        "cePi_iaXOdl7D8GQB"
+      )
+      .then((result) => {
+        console.log("Email sent to me!", result.text);
 
-  {/* send email */}
- const sendEmail = (e) => {
-  e.preventDefault();
+        emailjs
+          .sendForm(
+            "service_mosq1lt",
+            "template_1zqh3b9",
+            e.target,
+            "cePi_iaXOdl7D8GQB"
+          )
+          .then(() => {
+            console.log("Auto-reply sent!");
+          })
+          .catch((err) => console.error("Failed to send auto-reply:", err));
 
-  // أول إيميل: يوصل ليك انت
-  emailjs.sendForm(
-    "service_mosq1lt",     // Service ID
-    "template_eml83tw",    // Template ID (الخاص بيك)
-    e.target,
-    "cePi_iaXOdl7D8GQB"    // Public Key
-  )
-  .then((result) => {
-    console.log("Email sent to me!", result.text);
-
-    // ثاني إيميل: Auto-reply للزائر
-    emailjs.sendForm(
-      "service_mosq1lt",     // نفس Service ID
-      "template_1zqh3b9",  // Template ID الجديد
-      e.target,
-      "cePi_iaXOdl7D8GQB"
-    )
-    .then(() => {
-      console.log("Auto-reply sent!");
-    })
-    .catch((err) => console.error("Failed to send auto-reply:", err));
-
-    alert("Message sent successfully!");
-    e.target.reset();
-  })
-  .catch((error) => {
-    console.log("Failed to send email:", error.text);
-    alert("Failed to send message. Please try again.");
-  });
-};
+        alert("Message sent successfully!");
+        e.target.reset();
+        setTimeout(() => setIsSending(false), 1500); // <-- Add this line
+      })
+      .catch((error) => {
+        console.log("Failed to send email:", error.text);
+        alert("Failed to send message. Please try again.");
+        setTimeout(() => setIsSending(false), 1500); // <-- Add this line
+      });
+  };
 
   const informations = [
     {
@@ -58,8 +64,7 @@ export const ContactMe = () => {
       icon: "fa-solid fa-briefcase",
       title: "Availability",
       description: "Open for opportunities",
-    }
-    
+    },
   ];
   return (
     <div id="contact" className="px-8 md:px-20 lg:px-30 py-20">
@@ -75,65 +80,78 @@ export const ContactMe = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2  gap-10 md:gap-4 ">
         {/* Form */}
         <motion.div
-         initial={{ opacity: 0, translateX: -100 }}
-         whileInView={{ opacity: 1, translateX: 0 }}
-         transition={{ duration: 1 }}
-         viewport={{ once: false , amount: 0.2 }}
-
-         className="space-x-8 bg-gray-800 border-1 border-gray-600 rounded-md p-5 md:p-10 shadow-lg ">
-          <h1 className="text-3xl font-bold text-white text-center mb-10"><span className="text-teal-300">Get</span> in Touch</h1>
-          <form onSubmit={sendEmail} className="flex flex-col space-y-4" action="">
+          initial={{ opacity: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="space-x-8 bg-gray-800/50 backdrop-blur-[5px] border-1 border-gray-600 rounded-md p-5 md:p-10 shadow-lg "
+        >
+          <h1 className="text-3xl font-bold text-white text-center mb-10">
+            <span className="text-teal-300">Get</span> in Touch
+          </h1>
+          <form
+            onSubmit={sendEmail}
+            className="flex flex-col space-y-4"
+            action=""
+          >
             <input
               type="text"
               placeholder="Name"
-              className="p-2 w-full text-white rounded-md bg-teal-300/20 outline-none"
+              className="p-2 w-full text-white rounded-md bg-teal-300/20 backdrop-blur-[5px] outline-none"
               id="name"
               name="name"
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-2 w-full text-white rounded-md bg-teal-300/20 outline-none"
+              className="p-2 w-full text-white rounded-md bg-teal-300/20 backdrop-blur-[5px] outline-none"
               id="email"
               name="email"
             />
             <textarea
               placeholder="Message"
-              className="p-2 w-full h-[100px] rounded-md text-white bg-teal-300/20 outline-none"
+              className="p-2 w-full h-[100px] rounded-md text-white bg-teal-300/20 backdrop-blur-[5px] outline-none"
               id="message"
               name="message"
             />
             <button
               type="submit"
-              className="bg-teal-300 text-white px-1 py-1 rounded-md w-20 hover:bg-teal-400 hover:cursor-pointer hover:transform hover:scale-105 transition-all duration-300"
+              className="bg-teal-300 text-white px-1 py-1 rounded-md w-[100px] hover:bg-teal-400 hover:cursor-pointer hover:transform hover:scale-105 transition-all duration-300"
+              disabled={isSending}
             >
-              Send
+              {isSending ? "Sending ..." : "send"}
             </button>
           </form>
-      </motion.div>
+        </motion.div>
 
         {/* Informations */}
         <motion.div
           initial={{ opacity: 0, translateX: 100 }}
-         whileInView={{ opacity: 1, translateX: 0 }}
-         transition={{ duration: 1 }}
-         viewport={{ once: false , amount: 0.2 }}
-          className="space-x-8 bg-gray-800 border-gray-700 border-1 rounded-md p-6 md:p-10 shadow-lg">
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="space-x-8 bg-gray-800/50 backdrop-blur-[5px] border-gray-700 border-1 rounded-md p-6 md:p-10 shadow-lg"
+        >
           <h1 className="text-3xl font-bold text-white text-center mb-6">
             Contact <span className="text-teal-300">Information</span>
           </h1>
           {informations.map((information, index) => (
-          <div key={index} className="bg-teal-300/20 hover:bg-teal-300/50 w-full mb-2 hover:cursor-pointer hover:transform hover:scale-102 transition-all duration-300 flex md:flex-row  border-1 border-gray-500 rounded-md p-2 ">
-            <div className="text-teal-300 p-2 text-2xl mr-4"><i className={information.icon}></i></div>
-            <div>
-              <div className="font-bold text-white">{information.title}</div>
-              <div className="text-gray-400 text-sm md:text-base">{information.description}</div>
+            <div
+              key={index}
+              className="bg-teal-300/20 backdrop-blur-[5px] hover:bg-teal-300/50 w-full mb-2 hover:cursor-pointer hover:transform hover:scale-102 transition-all duration-300 flex md:flex-row  border-1 border-gray-500 rounded-md p-2 "
+            >
+              <div className="text-teal-300 p-2 text-2xl mr-4">
+                <i className={information.icon}></i>
+              </div>
+              <div>
+                <div className="font-bold text-white">{information.title}</div>
+                <div className="text-gray-400 text-sm md:text-base">
+                  {information.description}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </motion.div>
-        
-
       </div>
     </div>
   );

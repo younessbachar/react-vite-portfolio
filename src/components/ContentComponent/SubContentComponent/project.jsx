@@ -68,7 +68,7 @@ const Project = () => {
             viewport={{ once: false, amount: 0.3 }}
             key={index}
             onClick={() => setActiveTab(skill)}
-            className={` border border-gray-200 bg-gray-800 rounded-lg shadow-sm  px-6 py-2 text-center ${
+            className={` border border-gray-200 bg-gray-800/50 backdrop-blur-[5px] rounded-lg shadow-sm  px-6 py-2 text-center ${
               activeTab === skill
                 ? "bg-teal-300"
                 : "border-gray-700  hover:bg-teal-300/50 hover:cursor-pointer hover:border-white/60 hover:shadow-lg"
@@ -89,7 +89,7 @@ const Project = () => {
 
 
       {/* projects */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data
           .filter(
             (project) =>
@@ -103,7 +103,7 @@ const Project = () => {
               transition={{ duration: 0.8, delay: index * 0.3 }}
               viewport={{ once: false, amount: 0.2 }}
               key={index}
-              class=" border border-gray-200 rounded-lg shadow-2xl hover:bg-teal-300/20 bg-gray-800 border-gray-700"
+              class=" border border-gray-200 rounded-lg shadow-2xl hover:bg-teal-300/20 bg-gray-800/50 backdrop-blur-[5px] border-gray-700"
             >
               <img
                 class="rounded-2xl p-1 object-cover h-52 w-full "

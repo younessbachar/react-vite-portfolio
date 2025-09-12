@@ -1,0 +1,40 @@
+{
+  "name": "Youness Bachar-Khir",
+  "skills": ["React", "MERN", "Python", "Flask", "Django", "n8n"],
+  "projects": [
+    {
+      "title": "BY-folio",
+      "description": "Description of BY-folio goes here. It includes details about the technologies used, features, and any other relevant information.",
+      "image": "https://via.placeholder.com/150",
+      "category": ["React.js", "TailwindCSS"],
+      "github": "https://github.com/younessbachar/react-vite-portfolio",
+      "preview": "https://by-folio.vercel.app/"
+    },
+    {
+      "title": "BY-System",
+      "description": "Description of BY-System goes here. It includes details about the technologies used, features, and any other relevant information.",
+      "image": "https://via.placeholder.com/150",
+      "category": ["Node.js"],
+      "github": "https://github.com/younessbachar/BY-System",
+      "preview": "https://nodejs-project-xrrt.onrender.com/"
+    },
+    {
+      "title": "TailwindCSS",
+      "description": "Description of TailwindCSS goes here. It includes details about the technologies used, features, and any other relevant information.",
+      "image": "https://via.placeholder.com/150",
+      "category": ["TailwindCSS"],
+      "github": "https://github.com/younessbachar/tailwind-project",
+      "preview": "https://younessbachar.github.io/tailwind-project/"
+    },
+    {
+      "title": "n8n",
+      "description": "Description of n8n goes here. It includes details about the technologies used, features, and any other relevant information.",
+      "image": "https://via.placeholder.com/150",
+      "category": ["n8n"],
+      "github": "https://github.com/younessbachar/n8n",
+      "preview": "https://n8n.io/"
+    },
+    {"title":"AI Portfolio Assistant","link":"https://...","desc":"Agent يجاوب على أسئلة الزوار"}
+  ],
+  "contact": {"email":"you@example.com","linkedin":"https://linkedin.com/in/you"}
+}

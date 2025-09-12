@@ -63,7 +63,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 , delay: index * 0.3 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="block p-4 border border-gray-200 rounded-lg shadow shadow-lg bg-gray-800 border-gray-700 hover:bg-teal-300/20"
+            className="block p-4 border border-gray-200 rounded-lg shadow shadow-lg bg-gray-800/50 backdrop-blur-[5px] border-gray-700 hover:bg-teal-300/20"
           >
             <h1 className="py-1 mr-2"><i className={`text-2xl text-teal-300 ${skill.icon}`}></i></h1>
             <h5 className="text-center text-xl font-bold tracking-tight text-gray-900 text-white">
