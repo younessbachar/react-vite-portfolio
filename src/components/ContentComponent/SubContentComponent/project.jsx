@@ -3,6 +3,9 @@ import photo from "../../../assets/images/1.jpeg";
 import portfolio from "../../../assets/images/portfolio.png";
 import bysystem from "../../../assets/images/bysystem.png";
 import tailwindcss from "../../../assets/images/tailwindcss.png";
+import Btask from "../../../assets/images/B-Task.png";
+
+
 
 import { motion } from "framer-motion";
 const Project = () => {
@@ -21,7 +24,7 @@ const Project = () => {
       description:
         "Description of BY-System goes here. It includes details about the technologies used, features, and any other relevant information.",
       image: bysystem,
-      category: ["Node.js", "View All"],
+      category: ["Node.js", "Full Stack Development", "View All"],
       github: "https://github.com/younessbachar/BY-System",
       preview: "https://nodejs-project-xrrt.onrender.com/",
     },
@@ -33,6 +36,15 @@ const Project = () => {
       category: ["TailwindCSS", "View All"],
       github: "https://github.com/younessbachar/tailwind-project",
       preview: "https://younessbachar.github.io/tailwind-project/",
+    },
+    {
+      title: "B-Task",
+      description:
+        "Description of B-Task goes here. It includes details about the technologies used, features, and any other relevant information.",
+      image: Btask,
+      category: ["React.js", "View All"],
+      github: "https://github.com/younessbachar/myapp",
+      preview: "https://myapp-44b7b.web.app/",
     },
   ];
 
