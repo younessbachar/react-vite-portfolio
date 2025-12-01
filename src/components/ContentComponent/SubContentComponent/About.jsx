@@ -56,7 +56,7 @@ const About = () => {
         </div>
         <motion.a
         whileHover={{scale:1.1}}
-        href="/MyCV.pdf" download={"MyCV.pdf"} className="text-white px-2 py-2 bg-teal-300 my-4 rounded-md hover:bg-teal-400 hover:cursor-pointer border-none px-4 mx-2">
+        href="/MyCV.pdf" download={"MyCVv.pdf"} className="text-white px-2 py-2 bg-teal-300 my-4 rounded-md hover:bg-teal-400 hover:cursor-pointer border-none px-4 mx-2">
           Download CV
         </motion.a>
       </motion.div>

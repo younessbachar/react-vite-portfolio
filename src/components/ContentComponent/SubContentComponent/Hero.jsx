@@ -23,7 +23,7 @@ const Hero = () => {
           whileHover={{scale:1.1}}
           onClick={()=>{document.getElementById('contact').scrollIntoView({behavior:"smooth"})}}
           className='text-white border-none py-1 bg-teal-300  rounded-md hover:bg-teal-400 hover:cursor-pointer hover:transform hover:scale-105 transition-all duration-300 px-2 mx-2'>Contact me</motion.button>
-          <motion.a href="/MyCV.pdf" className='text-sm hover:text-teal-300 hover:cursor-pointer'  download="MyCV.pdf" >Download CV</motion.a>
+          <motion.a href="/MyCV" className='text-sm hover:text-teal-300 hover:cursor-pointer'  download="MyCVv.pdf" >Download CV</motion.a>
         </div>
         
       </motion.div>
